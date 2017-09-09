@@ -19,9 +19,11 @@ class ServiceProvider extends IlluminateServiceProvider
      */
     private function configurePaths()
     {
-        $this->publishes([
-            __DIR__.'/config/config.php' => config_path('google2fa.php'),
-        ]);
+        $this->package('pragmarx/google2fa');
+
+//         $this->publishes([
+//             __DIR__.'/config/config.php' => config_path('google2fa.php'),
+//         ]);
     }
 
     /**
@@ -29,9 +31,9 @@ class ServiceProvider extends IlluminateServiceProvider
      */
     private function mergeConfig()
     {
-        $this->mergeConfigFrom(
-            __DIR__.'/config/config.php', 'google2fa'
-        );
+//         $this->mergeConfigFrom(
+//             __DIR__.'/config/config.php', 'google2fa'
+//         );
     }
 
     /**
